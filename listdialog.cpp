@@ -177,10 +177,9 @@ Item ListDialog::getForm()
 {
     Item item(m_pDescription->text().toStdString());
 
-    for (auto i = 0; i < m_pList->count(); ++i)
+    for (const auto& edit: m_vEdits)
     {
-        if (i >= m_vEdits.size()) break;
-        item.values.push_back(m_vEdits[i]->text().toDouble());
+        item.values.push_back(edit->text().toDouble());
     }
 
     return item;

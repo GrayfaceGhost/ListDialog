@@ -366,6 +366,8 @@ void ListDialog::accept()
 {
     handleDirtyForm(m_pList->count() - 1);
 
+    extractData();
+
     QDialog::accept();
 }
 

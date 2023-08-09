@@ -106,6 +106,10 @@ protected:
 
     virtual bool validate() { return true; }
 
+    // override this to take the data
+
+    virtual void extractData() {}
+
     // layouts and form element generators
 
     QGridLayout *topLeftLayout();
